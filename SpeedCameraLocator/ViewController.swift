@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: GMSMapView!
     
+    var isTracking: Bool = false;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,7 +32,19 @@ class ViewController: UIViewController {
         marker.map = mapView
         
     }
-
+    
+    
+    @IBAction func toogleTracking(sender: UIButton) {
+        isTracking = !isTracking;
+        if isTracking {
+            sender.setTitle("Stop Tracking", forState: UIControlState.Normal);
+        } else {
+            sender.setTitle("Start Tracking", forState: UIControlState.Normal);
+        }
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

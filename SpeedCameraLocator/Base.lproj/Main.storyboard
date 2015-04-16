@@ -16,12 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWa-Qb-C3d" customClass="GMSMapView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWa-Qb-C3d" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.54528277853260865" green="0.54528277853260865" blue="0.54528277853260865" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKo-kc-D6b">
+                                <rect key="frame" x="252" y="500" width="95" height="30"/>
+                                <state key="normal" title="Start Tracking">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toogleTracking:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JYj-wb-8EA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="oWa-Qb-C3d" secondAttribute="bottom" id="NDe-ht-lhF"/>
+                            <constraint firstItem="oWa-Qb-C3d" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Pza-lD-rTx"/>
+                            <constraint firstAttribute="trailing" secondItem="oWa-Qb-C3d" secondAttribute="trailing" id="hhc-Zb-xeG"/>
+                            <constraint firstItem="oWa-Qb-C3d" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="zmd-bi-YcZ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="oWa-Qb-C3d" id="9pg-tS-yNA"/>
@@ -29,6 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="186" y="177"/>
         </scene>
     </scenes>
 </document>
