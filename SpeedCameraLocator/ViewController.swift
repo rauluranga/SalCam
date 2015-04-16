@@ -9,13 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var mapView: GMSMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         var camera = GMSCameraPosition.cameraWithLatitude(25.433353,longitude:-101.002808, zoom:13)
-        var mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
+        
+        mapView.camera = camera;
+        //var mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
+        
+        mapView.myLocationEnabled = true;
         
         var marker = GMSMarker()
         marker.position = camera.target
@@ -23,7 +29,6 @@ class ViewController: UIViewController {
         marker.appearAnimation = kGMSMarkerAnimationPop
         marker.map = mapView
         
-        self.view = mapView
     }
 
     override func didReceiveMemoryWarning() {
