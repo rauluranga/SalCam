@@ -18,27 +18,31 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
     
+    let cameras = [
+        CLLocationCoordinate2DMake(25.413490, -101.015551),
+        CLLocationCoordinate2DMake(25.412071, -101.016570),
+        CLLocationCoordinate2DMake(25.410079, -101.017798),
+        CLLocationCoordinate2DMake(25.407954, -101.019309)]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        var camera = GMSCameraPosition.cameraWithLatitude(25.433353,longitude:-101.002808, zoom:13)
-        
+        var camera = GMSCameraPosition.cameraWithLatitude(25.433353,longitude:-101.002808, zoom:18)
         mapView.camera = camera;
         
         let labelHeight = tracking_btn.intrinsicContentSize().height
         mapView.padding = UIEdgeInsets(top: self.topLayoutGuide.length, left: 0, bottom: labelHeight, right: 0)
         
-//        var marker = GMSMarker()
-//        marker.position = camera.target
-//        marker.snippet = "Hello World"
-//        marker.appearAnimation = kGMSMarkerAnimationPop
-//        marker.map = mapView
+        for cam_position in cameras {
+            var marker = GMSMarker()
+            marker.position = cam_position
+            marker.appearAnimation = kGMSMarkerAnimationPop
+            marker.icon = UIImage(named:"camera_pin");
+            marker.map = mapView
+        }
         
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
-        
     }
     
     //MARK: toogle tracking
@@ -71,7 +75,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         if let location = locations.first as? CLLocation {
-            mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 13, bearing: 0, viewingAngle: 0);
+            mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 17, bearing: 0, viewingAngle: 0);
             if !userDidTap {
                 locationManager.stopUpdatingLocation();
             }
