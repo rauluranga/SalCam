@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:GrupoW Loop.gpx">
+   </FileRef>
+   <FileRef
       location = "group:SpeedCameraLocator.xcodeproj">
    </FileRef>
    <FileRef

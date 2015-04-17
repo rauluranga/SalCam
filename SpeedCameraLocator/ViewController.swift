@@ -19,9 +19,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     let cameras = [
-        CLLocationCoordinate2DMake(25.413490, -101.015551),
         CLLocationCoordinate2DMake(25.412071, -101.016570),
-        CLLocationCoordinate2DMake(25.410079, -101.017798),
         CLLocationCoordinate2DMake(25.407954, -101.019309)]
     
     override func viewDidLoad() {
