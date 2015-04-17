@@ -3,3 +3,4 @@
 //
 
 #import <GoogleMaps/GoogleMaps.h>
+#import <GoogleMaps/GMSGeometryUtils.h>
