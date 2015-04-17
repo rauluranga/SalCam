@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40D8BB71AE1914600BA3B81 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C40D8BB61AE1914600BA3B81 /* beep.mp3 */; };
 		C4CD9C211AE024AE00035711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD9C201AE024AE00035711 /* AppDelegate.swift */; };
 		C4CD9C231AE024AE00035711 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD9C221AE024AE00035711 /* ViewController.swift */; };
 		C4CD9C261AE024AE00035711 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CD9C241AE024AE00035711 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		24B1FE3F491D9810A04310CB /* Pods-SpeedCameraLocator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedCameraLocator.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedCameraLocator/Pods-SpeedCameraLocator.release.xcconfig"; sourceTree = "<group>"; };
 		304B2B62000439C480FA59CB /* libPods-SpeedCameraLocator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpeedCameraLocator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C40D8BB61AE1914600BA3B81 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 		C43E78A91AE02CB8009BEA67 /* SpeedCameraLocator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpeedCameraLocator-Bridging-Header.h"; sourceTree = "<group>"; };
 		C4CD9C1B1AE024AE00035711 /* SpeedCameraLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedCameraLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CD9C1F1AE024AE00035711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		C4CD9C1D1AE024AE00035711 /* SpeedCameraLocator */ = {
 			isa = PBXGroup;
 			children = (
+				C40D8BB61AE1914600BA3B81 /* beep.mp3 */,
 				C4CD9C201AE024AE00035711 /* AppDelegate.swift */,
 				C4CD9C221AE024AE00035711 /* ViewController.swift */,
 				C4CD9C241AE024AE00035711 /* Main.storyboard */,
@@ -222,6 +225,7 @@
 			files = (
 				C4CD9C261AE024AE00035711 /* Main.storyboard in Resources */,
 				C4CD9C2B1AE024AE00035711 /* LaunchScreen.xib in Resources */,
+				C40D8BB71AE1914600BA3B81 /* beep.mp3 in Resources */,
 				C4CD9C281AE024AE00035711 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
