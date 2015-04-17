@@ -24,7 +24,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var camera = GMSCameraPosition.cameraWithLatitude(25.433353,longitude:-101.002808, zoom:18)
+        var camera = GMSCameraPosition.cameraWithLatitude(25.433353,longitude:-101.002808, zoom:17)
         mapView.camera = camera;
         
         let labelHeight = tracking_btn.intrinsicContentSize().height
@@ -73,7 +73,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         if let location = locations.first as? CLLocation {
-            mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 17, bearing: 0, viewingAngle: 0);
+            mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(location.coordinate))
             if !userDidTap {
                 locationManager.stopUpdatingLocation();
             }
