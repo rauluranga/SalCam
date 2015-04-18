@@ -10,6 +10,7 @@
 //http://stackoverflow.com/questions/14664685/google-maps-circle-to-polyline-coordinate-array
 //http://jomacinc.com/map-radius/
 //https://github.com/mattt/Surge
+//https://github.com/ankurp/Dollar.swift
 
 import UIKit
 import Darwin
@@ -75,8 +76,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
         audioPlayer.prepareToPlay()
         audioPlayer.numberOfLoops = -1
-        //audioPlayer.play()
-        //audioPlayer.stop()
     }
     
     //MARK: toogle tracking
