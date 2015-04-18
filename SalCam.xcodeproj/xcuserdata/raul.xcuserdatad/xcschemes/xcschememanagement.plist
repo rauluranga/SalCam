@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>SpeedCameraLocator.xcscheme</key>
+		<key>SalCam.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C4CD9C1A1AE024AE00035711</key>
+		<key>C44D9C4E1AE1DBDC0032E2E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C4CD9C2F1AE024AE00035711</key>
+		<key>C44D9C631AE1DBDC0032E2E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

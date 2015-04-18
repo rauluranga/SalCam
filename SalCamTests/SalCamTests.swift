@@ -1,15 +1,15 @@
 //
-//  SpeedCameraLocatorTests.swift
-//  SpeedCameraLocatorTests
+//  SalCamTests.swift
+//  SalCamTests
 //
-//  Created by Raul on 4/16/15.
+//  Created by Raul on 4/17/15.
 //  Copyright (c) 2015 rauluranga. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class SpeedCameraLocatorTests: XCTestCase {
+class SalCamTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

@@ -1,10 +1,11 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '6.0'
 
-target 'SpeedCameraLocator' do
+target 'SalCam' do
 	pod 'Google-Maps-iOS-SDK'
 end
 
-target 'SpeedCameraLocatorTests' do
+target 'SalCamTests' do
 
 end
+
