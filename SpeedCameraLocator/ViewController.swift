@@ -115,12 +115,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 locationManager.stopUpdatingLocation( );
             }
             
-            var inDaZone:Bool = false
-            for camera_region in camera_regions {
-                inDaZone = GMSGeometryContainsLocation(location.coordinate, camera_region.path, false)
-                if(inDaZone) {
-                    break
-                }
+            var inDaZone:Bool = camera_regions.any { element in
+                return GMSGeometryContainsLocation(location.coordinate, element.path, false)
             }
             
             if inDaZone {

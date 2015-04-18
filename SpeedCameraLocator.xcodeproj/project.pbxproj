@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C40D8BB71AE1914600BA3B81 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C40D8BB61AE1914600BA3B81 /* beep.mp3 */; };
+		C40D8BBB1AE1D08700BA3B81 /* each.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D8BBA1AE1D08700BA3B81 /* each.swift */; };
+		C40D8BBD1AE1D0DE00BA3B81 /* any.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D8BBC1AE1D0DE00BA3B81 /* any.swift */; };
 		C4CD9C211AE024AE00035711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD9C201AE024AE00035711 /* AppDelegate.swift */; };
 		C4CD9C231AE024AE00035711 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD9C221AE024AE00035711 /* ViewController.swift */; };
 		C4CD9C261AE024AE00035711 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CD9C241AE024AE00035711 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		24B1FE3F491D9810A04310CB /* Pods-SpeedCameraLocator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedCameraLocator.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedCameraLocator/Pods-SpeedCameraLocator.release.xcconfig"; sourceTree = "<group>"; };
 		304B2B62000439C480FA59CB /* libPods-SpeedCameraLocator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpeedCameraLocator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40D8BB61AE1914600BA3B81 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
+		C40D8BBA1AE1D08700BA3B81 /* each.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = each.swift; sourceTree = "<group>"; };
+		C40D8BBC1AE1D0DE00BA3B81 /* any.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = any.swift; sourceTree = "<group>"; };
 		C43E78A91AE02CB8009BEA67 /* SpeedCameraLocator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpeedCameraLocator-Bridging-Header.h"; sourceTree = "<group>"; };
 		C4CD9C1B1AE024AE00035711 /* SpeedCameraLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeedCameraLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CD9C1F1AE024AE00035711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,9 +77,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C40D8BB81AE1D08700BA3B81 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C40D8BB91AE1D08700BA3B81 /* array */,
+			);
+			name = extensions;
+			path = SpeedCameraLocator/extensions;
+			sourceTree = "<group>";
+		};
+		C40D8BB91AE1D08700BA3B81 /* array */ = {
+			isa = PBXGroup;
+			children = (
+				C40D8BBA1AE1D08700BA3B81 /* each.swift */,
+				C40D8BBC1AE1D0DE00BA3B81 /* any.swift */,
+			);
+			path = array;
+			sourceTree = "<group>";
+		};
 		C4CD9C121AE024AE00035711 = {
 			isa = PBXGroup;
 			children = (
+				C40D8BB81AE1D08700BA3B81 /* extensions */,
 				C4CD9C1D1AE024AE00035711 /* SpeedCameraLocator */,
 				C4CD9C331AE024AE00035711 /* SpeedCameraLocatorTests */,
 				C4CD9C1C1AE024AE00035711 /* Products */,
@@ -277,6 +300,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40D8BBD1AE1D0DE00BA3B81 /* any.swift in Sources */,
+				C40D8BBB1AE1D08700BA3B81 /* each.swift in Sources */,
 				C4CD9C231AE024AE00035711 /* ViewController.swift in Sources */,
 				C4CD9C211AE024AE00035711 /* AppDelegate.swift in Sources */,
 			);
