@@ -14,7 +14,6 @@
 
 import UIKit
 import Darwin
-import AVFoundation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -31,8 +30,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         CLLocationCoordinate2DMake(25.407954, -101.019309)]
     
     var camera_regions:[GMSPolygon] = []
-    
-    var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         
@@ -64,18 +61,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
-        
-        var path:String? = NSBundle.mainBundle().pathForResource("beep", ofType: "mp3")
-        var alertSound = NSURL(fileURLWithPath: path!)
-        
-        // Removed deprecated use of AVAudioSessionDelegate protocol
-        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
-        AVAudioSession.sharedInstance().setActive(true, error: nil)
-        
-        var error:NSError?
-        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-        audioPlayer.prepareToPlay()
-        audioPlayer.numberOfLoops = -1
     }
     
     //MARK: toogle tracking
@@ -98,6 +83,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     //MARK: CLLocation Manager
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        
         if status == .AuthorizedAlways {
             locationManager.startUpdatingLocation();
             mapView.myLocationEnabled = true;
@@ -106,6 +92,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        
         if let location = locations.first as? CLLocation {
             
             mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(location.coordinate))
@@ -119,11 +106,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
             
             if inDaZone {
-                if !audioPlayer.playing {
-                   audioPlayer.play();
-                }
+                SoundManager.sharedInstance.playAlarm()
             } else {
-                audioPlayer.stop();
+                SoundManager.sharedInstance.stopAlarm()
             }
         }
     }
