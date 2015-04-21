@@ -18,6 +18,8 @@
 		C44D9C7E1AE1DCB70032E2E7 /* GrupoW Loop.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C44D9C781AE1DCB70032E2E7 /* GrupoW Loop.gpx */; };
 		C44D9C7F1AE1DCB70032E2E7 /* any.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D9C7B1AE1DCB70032E2E7 /* any.swift */; };
 		C44D9C801AE1DCB70032E2E7 /* each.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D9C7C1AE1DCB70032E2E7 /* each.swift */; };
+		C4C8C2AE1AE6B7DA0064416A /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8C2AD1AE6B7DA0064416A /* SoundManager.swift */; };
+		C4C8C2AF1AE6B7DA0064416A /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8C2AD1AE6B7DA0064416A /* SoundManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 		C44D9C7B1AE1DCB70032E2E7 /* any.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = any.swift; sourceTree = "<group>"; };
 		C44D9C7C1AE1DCB70032E2E7 /* each.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = each.swift; sourceTree = "<group>"; };
 		C44D9C811AE1DDBC0032E2E7 /* SalCam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SalCam-Bridging-Header.h"; sourceTree = "<group>"; };
+		C4C8C2AD1AE6B7DA0064416A /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		EA5E795C236B143073E8F923 /* Pods-SalCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalCam.release.xcconfig"; path = "Pods/Target Support Files/Pods-SalCam/Pods-SalCam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +117,7 @@
 			children = (
 				C44D9C541AE1DBDC0032E2E7 /* AppDelegate.swift */,
 				C44D9C561AE1DBDC0032E2E7 /* ViewController.swift */,
+				C4C8C2AD1AE6B7DA0064416A /* SoundManager.swift */,
 				C44D9C581AE1DBDC0032E2E7 /* Main.storyboard */,
 				C44D9C5B1AE1DBDC0032E2E7 /* Images.xcassets */,
 				C44D9C5D1AE1DBDC0032E2E7 /* LaunchScreen.xib */,
@@ -332,6 +336,7 @@
 				C44D9C551AE1DBDC0032E2E7 /* AppDelegate.swift in Sources */,
 				C44D9C801AE1DCB70032E2E7 /* each.swift in Sources */,
 				C44D9C7F1AE1DCB70032E2E7 /* any.swift in Sources */,
+				C4C8C2AE1AE6B7DA0064416A /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C44D9C6B1AE1DBDC0032E2E7 /* SalCamTests.swift in Sources */,
+				C4C8C2AF1AE6B7DA0064416A /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

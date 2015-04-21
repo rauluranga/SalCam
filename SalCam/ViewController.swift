@@ -14,7 +14,7 @@
 
 import UIKit
 import Darwin
-import AVFoundation
+//import AVFoundation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -32,7 +32,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var camera_regions:[GMSPolygon] = []
     
-    var audioPlayer = AVAudioPlayer()
+//    var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         
@@ -65,17 +65,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         
-        var path:String? = NSBundle.mainBundle().pathForResource("beep", ofType: "mp3")
-        var alertSound = NSURL(fileURLWithPath: path!)
+//        var path:String? = NSBundle.mainBundle().pathForResource("beep", ofType: "mp3")
+//        var alertSound = NSURL(fileURLWithPath: path!)
         
         // Removed deprecated use of AVAudioSessionDelegate protocol
-        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
-        AVAudioSession.sharedInstance().setActive(true, error: nil)
-        
-        var error:NSError?
-        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-        audioPlayer.prepareToPlay()
-        audioPlayer.numberOfLoops = -1
+//        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
+//        AVAudioSession.sharedInstance().setActive(true, error: nil)
+//        
+//        var error:NSError?
+//        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
+//        audioPlayer.prepareToPlay()
+//        audioPlayer.numberOfLoops = -1
     }
     
     //MARK: toogle tracking
@@ -98,6 +98,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     //MARK: CLLocation Manager
     
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        
+         println("locationManager didChangeAuthorizationStatus")
+    
+        switch status {
+        case CLAuthorizationStatus.NotDetermined:
+             println("NotDetermined");
+        case CLAuthorizationStatus.Restricted:
+             println("Restricted");
+        case CLAuthorizationStatus.Denied:
+             println("Denied");
+        case CLAuthorizationStatus.AuthorizedAlways:
+             println("AuthorizedAlways");
+        case CLAuthorizationStatus.AuthorizedWhenInUse:
+             println("AuthorizedWhenInUse");
+        }
+        
         if status == .AuthorizedAlways {
             locationManager.startUpdatingLocation();
             mapView.myLocationEnabled = true;
@@ -106,7 +122,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        
+        println("didUpdateLocations")
+        
         if let location = locations.first as? CLLocation {
+            
+            println("tracking!")
             
             mapView.animateWithCameraUpdate(GMSCameraUpdate.setTarget(location.coordinate))
             
@@ -119,11 +140,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
             
             if inDaZone {
-                if !audioPlayer.playing {
-                   audioPlayer.play();
-                }
+                SoundManager.sharedInstance.playAlarm()
+//                if !audioPlayer.playing {
+//                   audioPlayer.play();
+//                }
             } else {
-                audioPlayer.stop();
+                SoundManager.sharedInstance.stopAlarm()
             }
         }
     }
