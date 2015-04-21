@@ -20,6 +20,7 @@
 		C44D9C801AE1DCB70032E2E7 /* each.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44D9C7C1AE1DCB70032E2E7 /* each.swift */; };
 		C4C8C2AE1AE6B7DA0064416A /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8C2AD1AE6B7DA0064416A /* SoundManager.swift */; };
 		C4C8C2AF1AE6B7DA0064416A /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8C2AD1AE6B7DA0064416A /* SoundManager.swift */; };
+		C4C8C2B91AE6C5110064416A /* GMSCirlePolygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8C2B81AE6C5110064416A /* GMSCirlePolygon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C44D9C7C1AE1DCB70032E2E7 /* each.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = each.swift; sourceTree = "<group>"; };
 		C44D9C811AE1DDBC0032E2E7 /* SalCam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SalCam-Bridging-Header.h"; sourceTree = "<group>"; };
 		C4C8C2AD1AE6B7DA0064416A /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		C4C8C2B81AE6C5110064416A /* GMSCirlePolygon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMSCirlePolygon.swift; sourceTree = "<group>"; };
 		EA5E795C236B143073E8F923 /* Pods-SalCam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SalCam.release.xcconfig"; path = "Pods/Target Support Files/Pods-SalCam/Pods-SalCam.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 		C44D9C461AE1DBDC0032E2E7 = {
 			isa = PBXGroup;
 			children = (
+				C4C8C2B41AE6C5110064416A /* lib */,
 				C44D9C741AE1DCB70032E2E7 /* assets */,
 				C44D9C791AE1DCB70032E2E7 /* extensions */,
 				C44D9C511AE1DBDC0032E2E7 /* SalCam */,
@@ -192,6 +195,38 @@
 				C44D9C7C1AE1DCB70032E2E7 /* each.swift */,
 			);
 			path = array;
+			sourceTree = "<group>";
+		};
+		C4C8C2B41AE6C5110064416A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				C4C8C2B51AE6C5110064416A /* com */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		C4C8C2B51AE6C5110064416A /* com */ = {
+			isa = PBXGroup;
+			children = (
+				C4C8C2B61AE6C5110064416A /* google */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		C4C8C2B61AE6C5110064416A /* google */ = {
+			isa = PBXGroup;
+			children = (
+				C4C8C2B71AE6C5110064416A /* maps */,
+			);
+			path = google;
+			sourceTree = "<group>";
+		};
+		C4C8C2B71AE6C5110064416A /* maps */ = {
+			isa = PBXGroup;
+			children = (
+				C4C8C2B81AE6C5110064416A /* GMSCirlePolygon.swift */,
+			);
+			path = maps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C8C2B91AE6C5110064416A /* GMSCirlePolygon.swift in Sources */,
 				C44D9C571AE1DBDC0032E2E7 /* ViewController.swift in Sources */,
 				C44D9C551AE1DBDC0032E2E7 /* AppDelegate.swift in Sources */,
 				C44D9C801AE1DCB70032E2E7 /* each.swift in Sources */,

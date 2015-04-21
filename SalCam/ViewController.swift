@@ -13,7 +13,6 @@
 //https://github.com/ankurp/Dollar.swift
 
 import UIKit
-import Darwin
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -43,7 +42,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         for cam_position in cameras {
             
-            var polygon = GMSPolygon(path: drawCirclePath(cam_position, radius: 100, detail: 8))
+            var polygon = GMSCirclePolygon(radius: 100,location:cam_position)
             polygon.fillColor = UIColor(red:0.25, green:0, blue:0, alpha:0.05)
             polygon.strokeColor = UIColor.blackColor()
             polygon.strokeWidth = 2
@@ -111,29 +110,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 SoundManager.sharedInstance.stopAlarm()
             }
         }
-    }
-    
-    func drawCirclePath(point:CLLocationCoordinate2D, radius:Int, detail:Int) -> GMSMutablePath {
-        
-        let R    = 6371009.0; // earh radius in meters
-        let pi   = M_PI;
-        
-        let Lat  = (point.latitude * pi) / 180;
-        let Lng  = (point.longitude * pi) / 180;
-        let d    = Double(radius) / R;
-        
-        let path = GMSMutablePath()
-        
-        for(var i = 0; i <= 360; i += detail) {
-            
-            var brng = Double(i) * pi / 180.0;
-            var pLat = asin(sin(Lat)*cos(d) + cos(Lat)*sin(d)*cos(brng));
-            var pLng = ((Lng + atan2(sin(brng)*sin(d)*cos(Lat), cos(d)-sin(Lat)*sin(pLat))) * 180) / pi;
-            pLat = (pLat * 180.0)/pi;
-            
-            path.addCoordinate(CLLocationCoordinate2DMake(pLat, pLng))
-        }
-        return path
     }
 
     //MARK: Memory handler
