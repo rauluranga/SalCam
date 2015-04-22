@@ -35,7 +35,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
 
         var camera = GMSCameraPosition.cameraWithLatitude(25.433353,longitude:-101.002808, zoom:17)
+
         mapView.camera = camera;
+        mapView.settings.compassButton = true;
 
         let labelHeight = tracking_btn.intrinsicContentSize().height
         mapView.padding = UIEdgeInsets(top: self.topLayoutGuide.length, left: 0, bottom: labelHeight, right: 0)
@@ -70,15 +72,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             println("Tracking User position.....");
             sender.setTitle("Stop Tracking", forState: UIControlState.Normal);
             locationManager.startUpdatingLocation();
+            locationManager.startUpdatingHeading();
         } else {
             println("Tracking stopped");
             sender.setTitle("Start Tracking", forState: UIControlState.Normal);
             locationManager.stopUpdatingLocation();
+            locationManager.stopUpdatingHeading();
         }
 
     }
 
     //MARK: CLLocation Manager
+
+    func locationManager(manager: CLLocationManager!, didUpdateHeading newHeading: CLHeading!) {
+        
+        if newHeading.headingAccuracy > 0 {
+            mapView.animateToBearing(newHeading.magneticHeading)
+        }
+    }
 
     func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
 
@@ -86,6 +97,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.startUpdatingLocation();
             mapView.myLocationEnabled = true;
             mapView.settings.myLocationButton = true;
+            mapView.settings.compassButton = true;
         }
     }
 
