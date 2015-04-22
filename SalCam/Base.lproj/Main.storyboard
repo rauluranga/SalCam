@@ -20,9 +20,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.54528277853260865" green="0.54528277853260865" blue="0.54528277853260865" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKo-kc-D6b">
-                                <rect key="frame" x="0.0" y="500" width="600" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKo-kc-D6b">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="45b-kx-Aan"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start Tracking">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -35,10 +39,10 @@
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="oWa-Qb-C3d" secondAttribute="bottom" id="NDe-ht-lhF"/>
                             <constraint firstItem="oWa-Qb-C3d" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Pza-lD-rTx"/>
-                            <constraint firstItem="vKo-kc-D6b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="SMq-vq-gST"/>
-                            <constraint firstAttribute="trailing" secondItem="vKo-kc-D6b" secondAttribute="trailing" id="XC9-8s-MRj"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vKo-kc-D6b" secondAttribute="bottom" id="TwK-hX-20R"/>
+                            <constraint firstAttribute="trailing" secondItem="vKo-kc-D6b" secondAttribute="trailing" id="a4c-gL-aEO"/>
                             <constraint firstAttribute="trailing" secondItem="oWa-Qb-C3d" secondAttribute="trailing" id="hhc-Zb-xeG"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="vKo-kc-D6b" secondAttribute="bottom" id="y3Z-r3-pJ8"/>
+                            <constraint firstItem="vKo-kc-D6b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iBu-Lg-6V9"/>
                             <constraint firstItem="oWa-Qb-C3d" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="zmd-bi-YcZ"/>
                         </constraints>
                     </view>

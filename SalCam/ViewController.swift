@@ -39,7 +39,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.camera = camera;
         mapView.settings.compassButton = true;
 
-        let labelHeight = tracking_btn.intrinsicContentSize().height
+        let labelHeight:CGFloat = 60.0;
         mapView.padding = UIEdgeInsets(top: self.topLayoutGuide.length, left: 0, bottom: labelHeight, right: 0)
 
         for cam_position in cameras {
@@ -85,7 +85,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     //MARK: CLLocation Manager
 
     func locationManager(manager: CLLocationManager!, didUpdateHeading newHeading: CLHeading!) {
-        
+
         if newHeading.headingAccuracy > 0 {
             mapView.animateToBearing(newHeading.magneticHeading)
         }
